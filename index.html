@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arth | Digital Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Arth</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#works" class="nav-link">Works</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-title">Arth</h1>
+                <p class="hero-subtitle">Creative Designer & Digital Artist</p>
+                <p class="hero-description">Welcome to my digital portfolio showcasing my journey through creative design, branding, and digital artistry.</p>
+                <a href="#works" class="btn btn-primary">View My Works</a>
+            </div>
+            <div class="hero-image">
+                <img src="references/Endrina_act1.png" alt="Personal Wallpaper Design">
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll Down</span>
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="references/Endrina_act2.png" alt="Branding Moodboard">
+                    <p class="image-caption">My Branding Moodboard</p>
+                </div>
+                <div class="about-text">
+                    <h3>My Creative Philosophy</h3>
+                    <p>I believe in the power of design to tell stories and evoke emotions. My work is characterized by a modern blend of deep purples, vibrant magentas, and cool blues that reflect luxury and innovation.</p>
+                    <p>The colors I work with (purple, pink, and blue) represent sophistication and creativity. Each project is an opportunity to push boundaries and create something that resonates with modern aesthetics.</p>
+                    <div class="skills">
+                        <h4>What I Create</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Brand Identity</span>
+                            <span class="skill-tag">Logo Design</span>
+                            <span class="skill-tag">Print Design</span>
+                            <span class="skill-tag">UI/UX Design</span>
+                            <span class="skill-tag">Digital Art</span>
+                            <span class="skill-tag">Marketing Materials</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section id="works" class="works">
+        <div class="container">
+            <h2 class="section-title">My Works</h2>
+            <p class="section-subtitle">A collection of my creative projects and designs</p>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="print">Print</button>
+                <button class="filter-btn" data-filter="digital">Digital</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                
+                <!-- Wallpaper -->
+                <div class="portfolio-item" data-category="digital">
+                    <div class="portfolio-card" onclick="openModal('wallpaper')">
+                        <div class="card-image">
+                            <img src="references/Endrina_act1.png" alt="Personal Wallpaper Design">
+                            <div class="card-overlay">
+                                <span class="view-project">View Project</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">Digital Art</span>
+                            <h3 class="card-title">Personal Wallpaper</h3>
+                            <p class="card-description">A watercolor-inspired wallpaper representing my personality and creative vision.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Moodboard -->
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-card" onclick="openModal('moodboard')">
+                        <div class="card-image">
+                            <img src="references/Endrina_act2.png" alt="Branding Moodboard">
+                            <div class="card-overlay">
+                                <span class="view-project">View Project</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">Branding</span>
+                            <h3 class="card-title">Branding Moodboard</h3>
+                            <p class="card-description">Visual inspiration board defining my personal brand identity and aesthetic.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logo Designs -->
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-card" onclick="openModal('logos')">
+                        <div class="card-image">
+                            <img src="references/Endrina_ACT5_LOGO1.png" alt="Logo Design">
+                            <div class="card-overlay">
+                                <span class="view-project">View Project</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">Branding</span>
+                            <h3 class="card-title">Logo Designs</h3>
+                            <p class="card-description">Official logo designs showcasing my personal brand identity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brochures -->
+                <div class="portfolio-item" data-category="print">
+                    <div class="portfolio-card" onclick="openModal('brochure')">
+                        <div class="card-image">
+                            <img src="references/Endrina_act4_OUTSIDE.png" alt="Brochure Design">
+                            <div class="card-overlay">
+                                <span class="view-project">View Project</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">Print Design</span>
+                            <h3 class="card-title">Brochure Design</h3>
+                            <p class="card-description">Professional brochure showcasing information in an engaging layout.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flyers -->
+                <div class="portfolio-item" data-category="print">
+                    <div class="portfolio-card" onclick="openModal('flyer')">
+                        <div class="card-image">
+                            <img src="references/Endrina_act5_flyer.png" alt="Flyer Design">
+                            <div class="card-overlay">
+                                <span class="view-project">View Project</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">Print Design</span>
+                            <h3 class="card-title">Flyer Design</h3>
+                            <p class="card-description">Eye-catching flyer design for promotional purposes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Card -->
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-card" onclick="openModal('businesscard')">
+                        <div class="card-image">
+                            <img src="references/Endrina_act6_FRONT.png" alt="Business Card">
+                            <div class="card-overlay">
+                                <span class="view-project">View Project</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">Branding</span>
+                            <h3 class="card-title">Business Card</h3>
+                            <p class="card-description">Professional business card design reflecting my personal brand.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2026 Calendar -->
+                <div class="portfolio-item" data-category="print">
+                    <div class="portfolio-card" onclick="openModal('calendar')">
+                        <div class="card-image">
+                            <img src="references/Endrina_2026Calendar.png" alt="2026 Calendar">
+                            <div class="card-overlay">
+                                <span class="view-project">View Project</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">Print Design</span>
+                            <h3 class="card-title">2026 Calendar</h3>
+                            <p class="card-description">Custom designed calendar for the year 2026 with personal branding.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile App Prototype -->
+                <div class="portfolio-item" data-category="digital">
+                    <div class="portfolio-card" onclick="openModal('mobileapp')">
+                        <div class="card-image">
+                            <img src="references/Endrina_MobileAppPrototype.png" alt="Mobile App Prototype">
+                            <div class="card-overlay">
+                                <span class="view-project">View Project</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span class="card-category">UI/UX Design</span>
+                            <h3 class="card-title">Mobile App Prototype</h3>
+                            <p class="card-description">Complete mobile application prototype with multiple screens and user flows.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Interested in working together? Let's connect!</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Blk 46 Lot 15, La Aldea del Mar, Babag 2, Lapu-Lapu City, Cebu, Philippines</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>arthandrey16@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Arth. All Rights Reserved.</p>
+            <p class="footer-tagline">Designed with creativity and passion</p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Wallpaper Modal -->
+    <div id="wallpaper-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('wallpaper')">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="references/Endrina_act1.png" alt="Personal Wallpaper Design">
+                </div>
+                <div class="modal-info">
+                    <span class="modal-category">Digital Art</span>
+                    <h2>Personal Wallpaper</h2>
+                    <p>The background which has a watercolor brush and composed of mainly colors light blue, yellow, pink, and white represents my curiosity and also the inner calm within me.</p>
+                    <p>The yellow/orange circle represents the sun which symbolizes to me that there will always be a tomorrow for me to improve and progress myself one step further from yesterday.</p>
+                    <p>Overall, this is the wallpaper that I've made that symbolizes my personality/character!</p>
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Type</span>
+                            <span class="detail-value">Digital Wallpaper</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Style</span>
+                            <span class="detail-value">Watercolor</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Colors</span>
+                            <span class="detail-value">Light Blue, Yellow, Pink, White</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Moodboard Modal -->
+    <div id="moodboard-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('moodboard')">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="references/Endrina_act2.png" alt="Branding Moodboard">
+                </div>
+                <div class="modal-info">
+                    <span class="modal-category">Branding</span>
+                    <h2>Branding Moodboard</h2>
+                    <p>This moodboard serves as the visual foundation for my personal brand identity. It captures the essence of my design philosophy and aesthetic preferences.</p>
+                    <p>The carefully curated collection of colors, textures, and visual elements helps maintain consistency across all my creative works.</p>
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Purpose</span>
+                            <span class="detail-value">Brand Identity</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Elements</span>
+                            <span class="detail-value">Colors, Typography, Textures</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logos Modal -->
+    <div id="logos-modal" class="modal">
+        <div class="modal-content modal-large">
+            <button class="modal-close" onclick="closeModal('logos')">&times;</button>
+            <div class="modal-body modal-body-full">
+                <div class="modal-info">
+                    <span class="modal-category">Branding</span>
+                    <h2>Logo Designs</h2>
+                    <p>These logo designs represent my personal brand identity. LOGO1 has become my official logo, used consistently across all my branding materials.</p>
+                    <div class="logo-showcase">
+                        <div class="logo-item">
+                            <img src="references/Endrina_ACT5_LOGO1.png" alt="Logo 1 - Official">
+                            <p class="image-caption">Logo 1 (Official)</p>
+                        </div>
+                        <div class="logo-item">
+                            <img src="references/Endrina_ACT5_LOGO2.png" alt="Logo 2">
+                            <p class="image-caption">Logo 2</p>
+                        </div>
+                    </div>
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Type</span>
+                            <span class="detail-value">Personal Branding</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Official Logo</span>
+                            <span class="detail-value">Logo 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Brochure Modal -->
+    <div id="brochure-modal" class="modal">
+        <div class="modal-content modal-large">
+            <button class="modal-close" onclick="closeModal('brochure')">&times;</button>
+            <div class="modal-body modal-body-full">
+                <div class="modal-info">
+                    <span class="modal-category">Print Design</span>
+                    <h2>Brochure Design</h2>
+                    <p>A professionally designed brochure that showcases information in an engaging and visually appealing layout. This design demonstrates my ability to organize content effectively while maintaining brand consistency.</p>
+                    <div class="brochure-showcase">
+                        <div class="brochure-item">
+                            <img src="references/Endrina_act4_OUTSIDE.png" alt="Brochure Outside">
+                            <p class="image-caption">Outside</p>
+                        </div>
+                        <div class="brochure-item">
+                            <img src="references/Endrina_act4_INSIDE.png" alt="Brochure Inside">
+                            <p class="image-caption">Inside</p>
+                        </div>
+                    </div>
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Type</span>
+                            <span class="detail-value">Marketing Material</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Sections</span>
+                            <span class="detail-value">Outside & Inside</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flyer Modal -->
+    <div id="flyer-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('flyer')">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="references/Endrina_act5_flyer.png" alt="Flyer Design">
+                </div>
+                <div class="modal-info">
+                    <span class="modal-category">Print Design</span>
+                    <h2>Flyer Design</h2>
+                    <p>An eye-catching flyer design created for promotional purposes. This design showcases my ability to create impactful marketing materials that grab attention and communicate messages effectively.</p>
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Type</span>
+                            <span class="detail-value">Promotional Material</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Format</span>
+                            <span class="detail-value">Digital Image</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Business Card Modal -->
+    <div id="businesscard-modal" class="modal">
+        <div class="modal-content modal-large">
+            <button class="modal-close" onclick="closeModal('businesscard')">&times;</button>
+            <div class="modal-body modal-body-full">
+                <div class="modal-info">
+                    <span class="modal-category">Branding</span>
+                    <h2>Business Card</h2>
+                    <p>A professional business card design that reflects my personal brand identity. This design combines aesthetics with functionality, providing essential contact information in an elegant format.</p>
+                    <div class="businesscard-showcase">
+                        <div class="businesscard-item">
+                            <img src="references/Endrina_act6_FRONT.png" alt="Business Card Front">
+                            <p class="image-caption">Front</p>
+                        </div>
+                        <div class="businesscard-item">
+                            <img src="references/Endrina_act6_BACK1.png" alt="Business Card Back Design 1">
+                            <p class="image-caption">Back - Design 1</p>
+                        </div>
+                        <div class="businesscard-item">
+                            <img src="references/Endrina_act6_BACK2.png" alt="Business Card Back Design 2">
+                            <p class="image-caption">Back - Design 2</p>
+                        </div>
+                    </div>
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Type</span>
+                            <span class="detail-value">Professional Stationery</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Designs</span>
+                            <span class="detail-value">1 Front, 2 Back Variations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calendar Modal -->
+    <div id="calendar-modal" class="modal">
+        <div class="modal-content modal-large">
+            <button class="modal-close" onclick="closeModal('calendar')">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="references/Endrina_2026Calendar.png" alt="2026 Calendar">
+                </div>
+                <div class="modal-info">
+                    <span class="modal-category">Print Design</span>
+                    <h2>2026 Calendar</h2>
+                    <p>A custom designed calendar for the year 2026, featuring my personal branding elements. This calendar combines functionality with aesthetic design, making everyday planning a visual delight.</p>
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Year</span>
+                            <span class="detail-value">2026</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Type</span>
+                            <span class="detail-value">Personal Calendar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile App Modal -->
+    <div id="mobileapp-modal" class="modal">
+        <div class="modal-content modal-large">
+            <button class="modal-close" onclick="closeModal('mobileapp')">&times;</button>
+            <div class="modal-body modal-body-full">
+                <div class="modal-info">
+                    <span class="modal-category">UI/UX Design</span>
+                    <h2>Mobile App Prototype</h2>
+                    <p>A complete mobile application prototype showcasing multiple screens and user flows. This project demonstrates my UI/UX design skills and ability to create cohesive digital experiences.</p>
+                    
+                    <div class="app-showcase">
+                        <div class="app-main-image">
+                            <img src="references/Endrina_MobileAppPrototype.png" alt="Mobile App Overview">
+                            <p class="image-caption">Complete App Overview</p>
+                        </div>
+                        
+                        <h3>Individual Screens</h3>
+                        <div class="app-screens-grid">
+                            <div class="app-screen">
+                                <img src="references/MobileAppPrototype_Main.png" alt="Main Screen">
+                                <p>Main Screen</p>
+                            </div>
+                            <div class="app-screen">
+                                <img src="references/MobileAppPrototype_Homepage.png" alt="Homepage">
+                                <p>Homepage</p>
+                            </div>
+                            <div class="app-screen">
+                                <img src="references/MobileAppPrototype_LogInPage.png" alt="Login Page">
+                                <p>Login Page</p>
+                            </div>
+                            <div class="app-screen">
+                                <img src="references/MobileAppPrototype_RegisterPage.png" alt="Register Page">
+                                <p>Register Page</p>
+                            </div>
+                            <div class="app-screen">
+                                <img src="references/MobileAppPrototype_ForgotPassword.png" alt="Forgot Password">
+                                <p>Forgot Password</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Type</span>
+                            <span class="detail-value">Mobile App UI/UX</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Screens</span>
+                            <span class="detail-value">5 Pages</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Features</span>
+                            <span class="detail-value">Login, Register, Home, Password Recovery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
