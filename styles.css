@@ -1399,12 +1399,17 @@ img {
     .hero {
         padding-top: calc(70px + var(--spacing-md));
     }
-    
-    .hero-title {
-        font-size: 2.5rem;
+
+    .hero-greeting {
+        font-size: 1.2rem;
+        margin-bottom: 0rem;
     }
     
-    .hero-subtitle {
+    .hero-title {
+        font-size: 5rem;
+    }
+    
+    .hero-subtitle {        
         font-size: 1.2rem;
     }
     
