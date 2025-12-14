@@ -1324,8 +1324,14 @@ img {
     }
     
     .nav-link {
-        padding: 1rem 0;
+        display: block;
+        padding: 0.7rem 0.5rem;
+        margin-bottom: 0.5rem;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .nav-link::after {
+        bottom: -2px;
     }
     
     .portfolio-grid {
@@ -1407,17 +1413,35 @@ img {
         justify-content: center;
     }
     
+    .modal {
+        padding: 0.75rem;
+    }
+    
     .modal-content {
-        margin: var(--spacing-sm) 0;
+        margin: 0.5rem 0;
         border-radius: var(--radius-md);
+        width: calc(100% - 1.5rem);
     }
     
     .modal-info {
-        padding: var(--spacing-md);
+        padding: 2rem;
     }
     
     .modal-info h2 {
         font-size: 1.5rem;
+    }
+    
+    .logo-showcase {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .logo-item img {
+        width: auto;
+        max-width: 100%;
+        max-height: 280px;
+        margin: 0 auto;
+        object-fit: contain;
     }
     
     .pdf-links {
