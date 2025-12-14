@@ -1015,6 +1015,75 @@ img {
     font-weight: 500;
 }
 
+/* Modal Action Buttons */
+.modal-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(123, 45, 142, 0.15);
+}
+
+.modal-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    padding: 0.85rem 1.5rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    transition: var(--transition-normal);
+    text-decoration: none;
+}
+
+.modal-buttons .btn svg {
+    flex-shrink: 0;
+}
+
+.modal-buttons .btn .btn-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+/* PDF Button */
+.btn-pdf {
+    background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+    color: white;
+}
+
+.btn-pdf:hover {
+    background: linear-gradient(135deg, #B91C1C 0%, #991B1B 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+}
+
+/* Canva Button */
+.btn-canva {
+    background: linear-gradient(135deg, #00C4CC 0%, #7B2D8E 100%);
+    color: white;
+}
+
+.btn-canva:hover {
+    background: linear-gradient(135deg, #00A8B0 0%, #6B2580 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 196, 204, 0.4);
+}
+
+/* Figma Button */
+.btn-figma {
+    background: linear-gradient(135deg, #F24E1E 0%, #A259FF 50%, #1ABCFE 100%);
+    color: white;
+}
+
+.btn-figma:hover {
+    background: linear-gradient(135deg, #E04416 0%, #9050E8 50%, #18A8E6 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(162, 89, 255, 0.4);
+}
+
 .pdf-links {
     display: flex;
     flex-wrap: wrap;
@@ -1353,6 +1422,15 @@ img {
     
     .pdf-links {
         flex-direction: column;
+    }
+    
+    .modal-buttons {
+        flex-direction: column;
+    }
+    
+    .modal-buttons .btn {
+        width: 100%;
+        justify-content: center;
     }
     
     .app-screens-grid {
