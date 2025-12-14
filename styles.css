@@ -273,12 +273,13 @@ img {
     font-size: 1.5rem;
     color: var(--color-primary);
     font-weight: 500;
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: -0.5rem;
+    margin-left: 0.3rem;
     letter-spacing: 1px;
 }
 
 .hero-title {
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(3rem, 6vw, 10rem);
     margin-bottom: var(--spacing-sm);
     background: var(--gradient-primary);
     -webkit-background-clip: text;
